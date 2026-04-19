@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOCALIZE JAPAN LP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --text: #5a5a5a;
+        --main: #20c3ff;
+        --bg-soft: #f8f8f8;
+        --yellow: #fff2ce;
+        --sky: #40d8ef;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #ddd;
+        font-family: "Noto Sans JP", sans-serif;
+        color: var(--text);
+      }
+
+      .lp {
+        width: 375px;
+        margin: 0 auto;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section {
+        position: relative;
+        padding: 28px 24px;
+      }
+
+      .hero {
+        background: url("images/bg_main.png") center top / cover no-repeat;
+        min-height: 720px;
+        padding-top: 18px;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        color: #4a4a4a;
+        margin-bottom: 28px;
+      }
+
+      .hero-copy-wrap {
+        background: rgba(190, 190, 190, 0.5);
+        padding: 26px 20px;
+        margin: 86px 5px 0;
+      }
+
+      .hero-copy-top {
+        color: #fff;
+        font-weight: 700;
+        font-size: 22px;
+        margin: 0 0 10px;
+        letter-spacing: 0.04em;
+      }
+
+      .hero-copy-main {
+        margin: 0;
+        color: #fff;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 0.95;
+      }
+
+      .hero-copy-sub {
+        margin: 12px 0 0;
+        color: #fff;
+        font-weight: 700;
+        font-size: 34px;
+      }
+
+      .hero-bottom {
+        margin-top: 28px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 28px;
+        text-align: center;
+      }
+
+      .cta-label {
+        width: 288px;
+        margin: 18px auto 0;
+        height: 40px;
+        border: 1px solid #aeaeae;
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+        font-size: 15px;
+        display: grid;
+        place-items: center;
+        letter-spacing: 0.04em;
+      }
+
+      .cta-button {
+        width: 288px;
+        margin: 14px auto 0;
+        height: 54px;
+        border: 2px solid #fff;
+        border-radius: 27px;
+        background: var(--main);
+        color: #fff;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.08em;
+        box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+        display: grid;
+        place-items: center;
+      }
+
+      .problem {
+        background: url("images/bg_nayami.jpg") center / cover no-repeat;
+        color: #fff;
+      }
+
+      .problem h2 {
+        margin: 10px 0 18px;
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.25;
+        font-weight: 300;
+      }
+
+      .problem-card {
+        background: rgba(255, 255, 255, 0.75);
+        padding: 16px 18px;
+      }
+
+      .problem-card p {
+        margin: 10px 0;
+        color: #3c3c3c;
+        font-size: 18px;
+        padding-left: 30px;
+        background: url("images/icon_check.png") left 0.25em / 18px 18px no-repeat;
+      }
+
+      .solve-banner {
+        background: linear-gradient(176deg, var(--sky) 3%, #c7ebf0 98%);
+        color: #fff;
+        text-align: center;
+      }
+
+      .solve-banner .line1 {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .solve-banner .line2 {
+        font-size: 32px;
+        color: #ff58c2;
+        font-weight: 700;
+      }
+
+      .capability {
+        background: #fff;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.35;
+        margin: 0 0 20px;
+      }
+
+      .card-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .service-card {
+        border-radius: 6px;
+        padding: 18px 16px;
+        min-height: 127px;
+        background: linear-gradient(
+          110deg,
+          #c8edfa 1%,
+          #fff 31%,
+          var(--yellow) 100%
+        );
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 86px auto;
+      }
+
+      .service-card-package {
+        background-image: url("images/img_package.png"),
+          linear-gradient(110deg, #c8edfa 1%, #fff 31%, var(--yellow) 100%);
+      }
+
+      .service-card-japanize {
+        background-image: url("images/img_japanize.png"),
+          linear-gradient(110deg, #c8edfa 1%, #fff 31%, var(--yellow) 100%);
+      }
+
+      .service-card-lp {
+        background-image: url("images/img_LP.png"),
+          linear-gradient(110deg, #c8edfa 1%, #fff 31%, var(--yellow) 100%);
+      }
+
+      .service-card-setting {
+        background-image: url("images/img_setting.png"),
+          linear-gradient(110deg, #c8edfa 1%, #fff 31%, var(--yellow) 100%);
+      }
+
+      .service-card h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.3;
+        font-weight: 500;
+        max-width: 185px;
+      }
+
+      .point {
+        background: #fffbde;
+        text-align: center;
+      }
+
+      .point h2 {
+        margin: 0 0 18px;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.35;
+      }
+
+      .point-icon {
+        width: 72px;
+        display: block;
+        margin: 0 auto 14px;
+      }
+
+      .point-item {
+        margin: 20px 0 0;
+      }
+
+      .point-item .head {
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 0 10px;
+      }
+
+      .point-item .desc {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.35;
+      }
+
+      .ba {
+        background: linear-gradient(90deg, #f8f8f8 0%, #fff 50%, #f8f8f8 100%);
+      }
+
+      .ba h2 {
+        margin: 0 0 10px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 300;
+      }
+
+      .ba-intro {
+        text-align: center;
+        margin: 0 0 22px;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      .case {
+        margin-bottom: 24px;
+      }
+
+      .case-label {
+        width: 145px;
+        height: 24px;
+        margin: 0 auto;
+        background: var(--main);
+        color: #fff;
+        font-size: 15px;
+        display: grid;
+        place-items: center;
+      }
+
+      .case-title {
+        text-align: center;
+        margin: 8px 0 10px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .case-frame {
+        width: 246px;
+        height: 246px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+        touch-action: none;
+        user-select: none;
+      }
+
+      .ba-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+      }
+
+      .ba-after-wrap {
+        position: absolute;
+        inset: 0;
+        width: 50%;
+        overflow: hidden;
+      }
+
+      .ba-divider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #fff;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+        left: 50%;
+        transform: translateX(-50%);
+        pointer-events: none;
+      }
+
+      .ba-handle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        border: 2px solid #fff;
+        background: rgba(0, 0, 0, 0.45);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      .ba-tag {
+        position: absolute;
+        top: 8px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 700;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.55);
+        pointer-events: none;
+      }
+
+      .ba-tag-before {
+        left: 8px;
+      }
+
+      .ba-tag-after {
+        right: 8px;
+      }
+
+      .flow {
+        background: #ccf7fe;
+        text-align: center;
+      }
+
+      .flow h2 {
+        margin: 0 0 18px;
+        font-size: 30px;
+        font-weight: 300;
+      }
+
+      .flow-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .flow-item {
+        width: 234px;
+        height: 40px;
+        margin: 0 auto;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          #fff 19%,
+          #fff 81%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .flow-num {
+        font-weight: 800;
+        font-size: 32px;
+        background: linear-gradient(-70deg, #ffd14d 32%, #62d5ff 74%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .flow-text {
+        font-size: 20px;
+        letter-spacing: 0.12em;
+        font-weight: 300;
+      }
+
+      .about {
+        background: url("images/bg_about.png") center / cover no-repeat;
+        text-align: center;
+      }
+
+      .about h2 {
+        margin: 0 0 16px;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.35;
+      }
+
+      .about p {
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.45;
+        margin: 0 auto;
+        max-width: 291px;
+      }
+
+      .about-tags {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 20px;
+        justify-items: start;
+        max-width: 240px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .about-tags span {
+        position: relative;
+        padding-left: 14px;
+        font-weight: 700;
+      }
+
+      .about-tags span::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.58em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #76dfff;
+      }
+
+      .contact {
+        background: #d2d1d1;
+        text-align: center;
+        padding: 40px 24px 80px;
+      }
+
+      .contact-box {
+        width: 300px;
+        height: 621px;
+        background: #fff;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .contact-box iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+
+      .contact-name {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      .footer {
+        background: #626262;
+        color: #fff;
+        text-align: center;
+        padding: 42px 24px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="lp">
+      <section class="section hero">
+        <div class="logo">LOCALIZE JAPAN</div>
+        <div class="hero-copy-wrap">
+          <p class="hero-copy-top">その商品、</p>
+          <p class="hero-copy-main">デザイン<br />チカラ</p>
+          <p class="hero-copy-sub">で</p>
+        </div>
+        <p class="hero-bottom">もっと高く売れます。</p>
+        <div class="cta-label">私たちがご提供できること</div>
+        <div class="cta-button">まずは無料相談</div>
+      </section>
+
+      <section class="section problem">
+        <h2>輸入商品の販売、<br />こんな課題ありませんか？</h2>
+        <div class="problem-card">
+          <p>海外OEMで商品は作れたが売れない</p>
+          <p>安っぽく見えてしまう</p>
+          <p>パッケージやLPに違和感がある</p>
+          <p>デザインを誰に頼めばいいかわからない</p>
+        </div>
+      </section>
+
+      <section class="section solve-banner">
+        <div class="line1">LOCALIZE JAPAN が</div>
+        <div class="line2">解決</div>
+        <div class="line1">のお手伝いします</div>
+      </section>
+
+      <section class="section capability">
+        <h2 class="title">LOCALIZE JAPANが<br />できること</h2>
+        <div class="card-list">
+          <article class="service-card service-card-package"><h3>パッケージの<br />設計</h3></article>
+          <article class="service-card service-card-japanize"><h3>日本仕様の<br />デザイン制作</h3></article>
+          <article class="service-card service-card-lp"><h3>LP構成の<br />最適化</h3></article>
+          <article class="service-card service-card-setting"><h3>商品訴求の<br />再構築</h3></article>
+        </div>
+      </section>
+
+      <section class="section point">
+        <img class="point-icon" src="images/icon_crawn.png" alt="クラウンアイコン" />
+        <h2>日本市場で重要な<br />3つのポイント</h2>
+        <div class="point-item">
+          <p class="head">信頼できるデザイン・表現</p>
+        </div>
+        <div class="point-item">
+          <p class="head">理解しやすい構造</p>
+        </div>
+        <div class="point-item">
+          <p class="head">納得できる情報設計</p>
+          <p class="desc">
+            購入者の不安を解消するデザインと<br />
+            購入までのスムーズな導線で<br />
+            今より売れる設計をご提案します
+          </p>
+        </div>
+      </section>
+
+      <section class="section ba">
+        <h2>Before / After</h2>
+        <p class="ba-intro">
+          スライドを移動して<br />BeforeとリデザインしたAfterの<br />比較をご覧いただけます
+        </p>
+
+        <div class="case">
+          <div class="case-label">Case 1</div>
+          <p class="case-title">美容グッズのメイン画像</p>
+          <div class="case-frame ba-slider" data-position="50">
+            <img class="ba-image" src="images/1_after.png" alt="Case 1 After" />
+            <div class="ba-after-wrap">
+              <img class="ba-image" src="images/1_before.png" alt="Case 1 Before" />
+            </div>
+            <div class="ba-divider"></div>
+            <div class="ba-handle">⇆</div>
+            <span class="ba-tag ba-tag-before">Before</span>
+            <span class="ba-tag ba-tag-after">After</span>
+          </div>
+        </div>
+
+        <div class="case">
+          <div class="case-label">Case 2</div>
+          <p class="case-title">シェーバーのパッケージ</p>
+          <div class="case-frame ba-slider" data-position="50">
+            <img class="ba-image" src="images/2_after.png" alt="Case 2 After" />
+            <div class="ba-after-wrap">
+              <img class="ba-image" src="images/2_before.png" alt="Case 2 Before" />
+            </div>
+            <div class="ba-divider"></div>
+            <div class="ba-handle">⇆</div>
+            <span class="ba-tag ba-tag-before">Before</span>
+            <span class="ba-tag ba-tag-after">After</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section flow">
+        <h2>制作の流れ</h2>
+        <div class="flow-list">
+          <div class="flow-item"><span class="flow-num">01</span><span class="flow-text">ヒアリング</span></div>
+          <div class="flow-item"><span class="flow-num">02</span><span class="flow-text">現状分析</span></div>
+          <div class="flow-item"><span class="flow-num">03</span><span class="flow-text">改善提案</span></div>
+          <div class="flow-item"><span class="flow-num">04</span><span class="flow-text">納品</span></div>
+        </div>
+      </section>
+
+      <section class="section about">
+        <h2>ABOUT<br />LOCALIZE JAPAN</h2>
+        <p>
+          LOCALIZE JAPAN（ローカライズジャパン）は、主に中国OEM製品を日本市場で取り扱う日本のセラー様、
+          中華圏の企業様のお仕事をデザインでご協力するプロジェクトです。<br /><br />
+          日本市場に適したデザインで、今よりもっと商品の価値を引き上げ、刺さるデザインに仕上げます。<br /><br />
+          20年のキャリアを持つ日本人デザイナーであり、医薬品登録販売者の資格を持ち広告業界で長年活躍している
+          プランナ/デザイナーが、あなたの商売のパートナーとしてお手伝いいたします。
+        </p>
+        <div class="about-tags">
+          <span>WEB</span>
+          <span>Graphic</span>
+          <span>Branding</span>
+          <span>Package</span>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="contact-box">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSet83cXVf85CCcbIxZLEURJTMlNQXcYnvpxYmJSG5jmqRI67w/viewform?embedded=true"
+            width="640"
+            height="1070"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="お問い合わせフォーム"
+          >
+            読み込んでいます…
+          </iframe>
+        </div>
+        <div class="contact-name">Google フォーム</div>
+      </section>
+
+      <footer class="footer">© LOCALIZE JAPAN</footer>
+    </main>
+    <script>
+      (() => {
+        const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+        const setupSlider = (slider) => {
+          const afterWrap = slider.querySelector(".ba-after-wrap");
+          const divider = slider.querySelector(".ba-divider");
+          const handle = slider.querySelector(".ba-handle");
+          if (!afterWrap || !divider || !handle) return;
+
+          const setPosition = (percent) => {
+            const safePercent = clamp(percent, 0, 100);
+            afterWrap.style.width = `${safePercent}%`;
+            divider.style.left = `${safePercent}%`;
+            handle.style.left = `${safePercent}%`;
+            slider.dataset.position = safePercent.toFixed(2);
+          };
+
+          const getPercentByClientX = (clientX) => {
+            const rect = slider.getBoundingClientRect();
+            const relativeX = clamp(clientX - rect.left, 0, rect.width);
+            return (relativeX / rect.width) * 100;
+          };
+
+          let isDragging = false;
+
+          slider.addEventListener("pointerdown", (event) => {
+            isDragging = true;
+            slider.setPointerCapture(event.pointerId);
+            setPosition(getPercentByClientX(event.clientX));
+          });
+
+          slider.addEventListener("pointermove", (event) => {
+            if (!isDragging) return;
+            setPosition(getPercentByClientX(event.clientX));
+          });
+
+          const stopDragging = (event) => {
+            if (!isDragging) return;
+            isDragging = false;
+            if (slider.hasPointerCapture(event.pointerId)) {
+              slider.releasePointerCapture(event.pointerId);
+            }
+          };
+
+          slider.addEventListener("pointerup", stopDragging);
+          slider.addEventListener("pointercancel", stopDragging);
+          slider.addEventListener("pointerleave", stopDragging);
+
+          const initial = Number(slider.dataset.position || 50);
+          setPosition(Number.isFinite(initial) ? initial : 50);
+        };
+
+        document.querySelectorAll(".ba-slider").forEach(setupSlider);
+      })();
+    </script>
+  </body>
+</html>
